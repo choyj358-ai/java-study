@@ -22,13 +22,7 @@ public class Burger {
         this.price = price;
     }
 
-    // 베이컨, 토마토, 빵, 7000
-//    Burger(String 재료1, String 재료2, String 재료3, int price){
-//        this 재료1 = 재료1;
-//        this 재료2 = 재료2;
-//        this 재료3 = 재료3;
-//        this price = price;
-//    }
+
 
 
     public static void main(String[] args) {
