@@ -1,10 +1,10 @@
 package comp;
 
-public class Burger {
+public class Coke {
     private String name;
-    private  int price;
+    private int price;
 
-    public Burger(String name, int price) {
+    public Coke(String name, int price) {
         this.name = name;
         this.price = price;
         System.out.println(name+"가 만들어졌어요");
@@ -18,6 +18,11 @@ public class Burger {
         return price;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Coke{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

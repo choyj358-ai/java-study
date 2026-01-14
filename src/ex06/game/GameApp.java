@@ -1,19 +1,14 @@
-package ex04.game;
+package ex06.game;
 
 public class GameApp {
 
     //u1 -> u2를 공격
-    static void start(Zealot u1, Dragoon u2){
-        u2.hp = u2.hp - u1.attack;
+    static void start(Protoss u1, Protoss u2){
+       // u2.hp = u2.hp - u1.attack;
+        int remainHp = u2.getHp() - u1.getAttack();
+        u2.setHp(remainHp);
     }
 
-    static void start(Dragoon u1, Zealot u2){ // 오버로딩. 같은 함수이름(start) 부여 가능
-        u2.hp = u2.hp - u1.attack;
-    }
-
-    static void start(Zealot u1, Zealot u2){
-        u2.hp = u2.hp - u1.attack;
-    }
 
     public static void main(String[] args) {
         Zealot z1 = new Zealot();
@@ -23,17 +18,17 @@ public class GameApp {
         start(z1, d1);
 
         // 1. u1드라군의 상태확인
-        System.out.println(d1.hp);
+        System.out.println(d1.getHp());
 
         start(d1, z1);
 
         // 2. 질럿의 상태확인
-        System.out.println(z1.hp);
+        System.out.println(z1.getHp());
 
         start(z1, z2);
 
         //
-        System.out.println(z2.hp);
+        System.out.println(z2.getHp());
 
         System.out.println();
         System.out.println(1);

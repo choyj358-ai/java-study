@@ -1,13 +1,13 @@
 package comp;
 
-public class Coke {
+public class Potato {
     private String name;
     private int price;
 
-    public Coke(String name, int price) {
+    public Potato(String name, int price) {
         this.name = name;
         this.price = price;
-        System.out.println(name+"가 만들어졌어요");
+        System.out.println(name+"이 만들어졌어요");
     }
 
     public String getName() {
@@ -18,6 +18,11 @@ public class Coke {
         return price;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Potato{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

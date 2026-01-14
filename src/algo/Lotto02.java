@@ -2,7 +2,7 @@ package algo;
 
 import java.util.Random;
 
-public class Lotto01 {
+public class Lotto02 {
     public static void main(String[] args) {
         //1. 준비
         Random rand = new Random();
@@ -11,13 +11,25 @@ public class Lotto01 {
         //2. 로또 번호 받기
         int n;
 
-        //2-1. 첫 번째 추첨 [9][][][][][]
+        //2-1. 첫 번째 추첨 [9][][][][][] -> fix
         n = rand.nextInt(45)+1;
         arr[0] = n;
 
-        //2-2. 두 번째 추첨 [9][15][][][][]
-        n = rand.nextInt(45)+1;
-        arr[1] = n;
+        //2-2. 두 번째 추첨 [9][][][][][]
+        n = rand.nextInt(45)+1; // <- 9
+        if (arr[0] != n){
+            arr[1] = n;
+        }
+
+        n = rand.nextInt(45)+1; // <- 9
+        if (arr[0] != n){
+            arr[1] = n;
+        }
+
+        n = rand.nextInt(45)+1; // <- 15
+        if (arr[0] != n){
+            arr[1] = n;
+        }
 
         //2-3. 세 번째 추첨 [9][15][20][][][]
         n = rand.nextInt(45)+1;
